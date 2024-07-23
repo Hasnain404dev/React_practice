@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">this is the box</div>
+    <button>submit</button>
+    <script>
+        /*alert("hello world");
+        console.log("hey I am console  log and using javascript")
+        console.log("hey I am console  log and using javascript")
+        console.log("hey I am console and codee is running...")
+        var isTrue=confirm("you want to enter this website")
+        if (isTrue){
+            console.log("please use this web site for education purpose")
+        }
+        else{
+            console.log("please confirm your identity first")
+        }
+
+        var a=prompt("enter your number")
+        console.log("yor number is" + a)*/
+        let correctNumber = 7; // corrected variable name
+        let userInput; // declared userInput variable
+        
+        do {
+            userInput = parseInt(prompt("Enter the correct number")); // prompt inside the loop
+            if(userInput !== correctNumber) {
+                console.log("Try again");
+        
+            }
+            else{
+
+                console.log("this is the right number");
+            } 
+        } while(userInput !== correctNumber);
+        
+        console.log("You entered the right number: " + correctNumber); // corrected console log message
+        
+    </script>
+</body>
+</html>

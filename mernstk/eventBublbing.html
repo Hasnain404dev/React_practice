@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            border: 2px solid black;
+            text-align: center;
+            margin: 34px;
+            padding: 34px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .container{
+            background-color: rgb(235, 181, 181);
+            text-align: center;
+            margin: 34px;
+            padding: 34px;
+
+        }
+        .childcontainer{
+            background-color: rgb(220, 107, 107);
+           
+ 
+            margin: 34px;
+            padding: 34px;
+        }
+    </style>
+</head>
+<body>  
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">This is the child Element</div>
+        </div>
+    </div>
+  
+    <script>
+         let a=document.querySelector(".child").addEventListener("click",(event)=>{
+             event.stopPropagation()
+                alert("you click on child")
+                    
+            })                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+            document.querySelector(".childcontainer").addEventListener("click",()=>{
+                alert("you click on childcontainer")
+            })                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+            document.querySelector(".container").addEventListener("click",()=>{
+                alert("you click on container")
+
+            })                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+            document.addEventListener("keydown",(e)=>{
+            
+                console.log(e,e.key,e.keyCode)
+            }   )
+            function randomColor(){
+                let a1=Math.ceil(0+Math.random()*255)
+                let a2=Math.ceil(0+Math.random()*255)
+                let a3=Math.ceil(0+Math.random()*255)
+                return `rgb(${a1},${a2},${a3})`
+            } 
+            //setInterval is use to repeat the task in given time  
+           let d=setInterval(()=>{
+            document.querySelector(".container").style.backgroundColor=randomColor()
+           },1000)
+         // setTimeout is use to change the argument only once in given time
+         let s=setTimeout(()=>{
+            document.querySelector(".childcontainer").style.backgroundColor=randomColor()
+           },5000)
+    </script>
+    
+</body>
+</html>

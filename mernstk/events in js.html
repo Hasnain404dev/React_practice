@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in js</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+           
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            border: 2px solid black;
+            background-color: rgb(84, 85, 85);
+            align-items: center;
+            padding: 0px 10px;
+            color: whitesmoke;
+            border-radius: 10px;
+            margin-bottom: 5px;           
+            
+        }
+      #btn{
+        background-color: red;
+        color: white;
+      
+        padding: 10px;
+        border-style: none;
+        border-radius: 5px;
+      
+
+      }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">this is the event listner</div>
+        <button id="btn">Click the Button</button>
+    </div>
+    <script>
+        let button=document.getElementById("btn")
+        button.addEventListener("click",()=>{
+            alert("you click the btn");
+            document.querySelector(".box").style.backgroundColor="black"
+            document.querySelector(".box").style.textAlign="center"
+            document.querySelector(".box").innerHTML="you click the btn to change content"
+            button.style.backgroundColor="gray"
+            }) 
+        let hov=document.querySelector(".box")    
+        hov.addEventListener("dblclick",()=>{
+            document.querySelector(".box").innerHTML="you hover the box"
+            document.querySelector(".box").style.backgroundColor="green"
+        })
+        
+
+    </script>
+</body>
+</html>
