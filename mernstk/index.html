@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid in css</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            width: 100%;
+            
+            display: grid;
+            grid-template-columns: 120px 100px;
+            grid-template-rows: 100px 100px 100px;
+
+
+        }
+        .item{
+            border: 2px solid red;
+            width: 55px;
+            height: 55px;
+            box-sizing: border-box;
+        }
+        .item-4{
+            grid-row: 2/2;
+            grid-column: 2/2;
+        }
+        .item-2{
+            grid-row: 2/2;
+            grid-column: 2/2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-5">6</div>
+    </div>
+</body>
+</html> -->
+
+<!-- gird system 2nd method new content -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid in css</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            width: 100%;
+            
+            display: grid;
+            grid-template-areas:"nav nav nav" "right-side mid left" "footer footer footer";
+      
+
+
+        }
+        .item{
+            border: 2px solid red;
+        
+            height: 55px;
+            box-sizing: border-box;
+        }
+        .item-1{
+         grid-area: nav;
+        }
+        .item-2{
+           grid-area: right-side;
+        }
+    
+        .item-3{
+            grid-area: mid;
+        }
+        .item-4{
+            grid-area: left;
+        }
+        .item-5{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <!-- <div class="item item-5">6</div> -->
+    </div>
+</body>
+</html>
