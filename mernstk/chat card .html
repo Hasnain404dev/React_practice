@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(10, 10, 10);
+        }
+        .main_heading {
+            height: 100px;
+            background-color: rgb(41, 41, 41);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .main_heading .heading {
+            color: whitesmoke;
+            font-family: sans-serif;
+            font-size: 2rem;
+            margin-left: 20px;
+        }
+        .text {
+            color: whitesmoke;
+            font-family: sans-serif;
+            margin-left: 20px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .card {
+            display: flex;
+            margin-top: 20px;
+            margin-left: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .card .image img {
+            border-radius: 4px;
+            z-index: 2;
+        }
+        .image {
+            position: relative;
+        }
+        .text .mini-text {
+            margin-top: 10px;
+        }
+        .capsule {
+            position: absolute;
+            bottom: 8px;
+            right: 4px;
+            border-radius: 2px;
+            padding: 3px 8px;
+            font-size: 12px;
+            background-color: rgb(122, 122, 122);
+            color: #fff;
+            z-index: 10;
+            opacity: 0.9;
+        }
+        .form-container {
+            margin: 20px;
+            color: whitesmoke;
+        }
+        .form-container label {
+            display: block;
+            margin-top: 10px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main_heading">
+            <h4 class="heading">Sigma Web Development Course</h4>
+            <p class="text">CodeWithHarry <span class="dynamic">-1/131</span>  </p>
+        </div>
+        <div class="form-container">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+
+            <label for="cName">Channel Name:</label>
+            <input type="text" id="cName" name="cName">
+
+            <label for="views">Views:</label>
+            <input type="number" id="views" name="views">
+
+            <label for="monthOld">Months Old:</label>
+            <input type="number" id="monthOld" name="monthOld">
+
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration">
+
+            <label for="thumbnail">Thumbnail URL:</label>
+            <input type="text" id="thumbnail" name="thumbnail">
+
+            <button onclick="addCard()">Add Card</button>
+        </div>
+    </div>
+
+    <script>
+        function createCard(title, cName, views, monthOld, duration, thumbnail) {
+            let viewStr;
+            if (views < 1000000) {
+                viewStr = (views / 1000).toFixed(1) + "K";
+            } else if (views >= 1000000) {
+                viewStr = (views / 1000000).toFixed(1) + "M";
+            }
+
+            let dyna = `
+                <div class="card">
+                    <div class="image">
+                        <img src="${thumbnail}" alt="">
+                        <div class="capsule">${duration}</div>
+                    </div>
+                    <div class="text">
+                        <h3 class="card-text">${title}</h3>
+                        <p class="mini-text">${cName} . ${viewStr} views . ${monthOld} months ago</p>
+                    </div>
+                </div>`;
+            document.querySelector(".container").innerHTML += dyna;
+        }
+
+        function addCard() {
+            const title = document.getElementById('title').value;
+            const cName = document.getElementById('cName').value;
+            const views = parseInt(document.getElementById('views').value);
+            const monthOld = parseInt(document.getElementById('monthOld').value);
+            const duration = document.getElementById('duration').value;
+            const thumbnail = document.getElementById('thumbnail').value;
+
+            createCard(title, cName, views, monthOld, duration, thumbnail);
+        }
+    </script>
+</body>
+</html>

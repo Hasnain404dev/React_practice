@@ -43,12 +43,28 @@
         }
         .card .image img{
             border-radius: 4px;
+         
+            z-index: 2;
+        
         }
-        .capsule{
-            
+        .image{
+            position: relative;
         }
+     
         .text .mini-text{
             margin-top: 10px;
+        }
+        .capsule{
+            position: absolute;
+            bottom: 8px;
+            right: 4px;
+            border-radius: 2px;
+            padding: 3px 8px;
+            font-size: 12px;
+            background-color: rgb(122, 122, 122);
+            color: #fff;
+            z-index: 10;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -69,6 +85,7 @@
             </div>
         </div>
     </div>
-    
+
+    <script src="dynamic card.js"></script>
 </body>
 </html>
