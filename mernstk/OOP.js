@@ -4,7 +4,7 @@ const additem = async (item) => {
     div.innerHTML = item;
     div.setAttribute("class", "inner-box")
     document.querySelector(".box").append(div)
-    
+     
 
 }
 
