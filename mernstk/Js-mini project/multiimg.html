@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+        .container{
+            
+
+        }
+        .box{
+            width: 100%;
+            height: 130px;
+            border-bottom:3px solid #fff ;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #fff;
+            font-family: sans-serif;
+            padding-left: 10px;
+            position: relative;
+            z-index: 99;
+            cursor: pointer;
+
+            
+        }
+        .box-head{
+            font-size: 6vw;
+        }
+        .box-img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            mix-blend-mode: difference;
+            transition: all linear 0.2s;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img class="box-img" src="https://images.unsplash.com/photo-1501432377862-3d0432b87a14?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVhZHBvb2wlMjBhbmQlMjB3b2x2YXJpbmV8ZW58MHx8MHx8fDA%3D" alt="">
+            <h1 class="box-head">Deadpool and Wolvarine</h1>
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/originals/14/2c/5f/142c5ff7be07ea802d1dce8ad99ea746.jpg" class="box-img" alt="">
+            <h1 class="box-head">Captain America</h1>
+        </div>
+        <div class="box">
+            <img src="https://m.media-amazon.com/images/M/MV5BNTFkZjdjN2QtOGE5MS00ZTgzLTgxZjAtYzkyZWQ5MjEzYmZjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_FMjpg_UX1080_.jpg" class="box-img" alt="">
+            <h1 class="box-head">Venom</h1>
+        </div>
+        <div class="box">
+            <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX800_.jpg" class="box-img" alt="">
+            <h1 class="box-head">Avengers Doomsday</h1>
+        </div>
+        2007
+    </div>
+    <script src="multiimg.js"></script>
+</body>
+</html>
