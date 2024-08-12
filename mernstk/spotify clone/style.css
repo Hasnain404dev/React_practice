@@ -49,13 +49,14 @@ body{
 /* utilities classes */
 .container{
     width: 100%;
-    /* height: 100vh; */
+    height: 100%;
     background-color: #000;
 }
 .left-section{
    width: 25vw;
    color: #fff;
    padding: 10px;
+
 
   
 }
@@ -71,7 +72,7 @@ body{
 }
 .lib-sec{
    margin-top: 5px;
-   min-height: 80vh;
+   min-height: 78.5vh;
  
 }
 .heading{
@@ -117,7 +118,6 @@ body{
 
 .right-section{
     width: 75vw;
-    
     padding: 12px 10px 10px 0px;
 
     
@@ -157,7 +157,7 @@ body{
 
 }
 .body-sec{
-    min-height:90vh ;
+   min-height:90vh ;
 }
 .body-sec .b-heading{
    color: #fff;
@@ -168,22 +168,47 @@ body{
 .card-cont{
     padding: 10px 15px;
     display: flex;
+    gap: 15px;
     
 
 }
 .card-cont .card{
-    width: 250px;
+    width: 220px;
    border-radius:8px ;
     padding: 10px;
     background-color:#101010;
+    cursor: pointer;
+    position: relative;
+
+    
 }
 .card img{
     width: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
+   
 }
 .card .card-head,.card-para{
     padding-top:10px ;
     line-height: 1.5;
+}
+.card .play-h{
+    width: 40px;
+    height: 40px;
+ 
+    background-color: #1fdf64;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 180px;
+    right: 20px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+.card:hover{
+    
+
 }
