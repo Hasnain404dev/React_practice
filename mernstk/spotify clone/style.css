@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   
 }
 body{
     /* background-color: #000;
@@ -9,6 +9,7 @@ body{
     width: 100%;
     height: 100%;
     font-family: sans-serif;
+    color: #fff;
     
 
 }
@@ -49,7 +50,7 @@ body{
 .container{
     width: 100%;
     /* height: 100vh; */
-    background-color: gray;
+    background-color: #000;
 }
 .left-section{
    width: 25vw;
@@ -114,17 +115,75 @@ body{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .right-section{
     width: 75vw;
-   }
+    
+    padding: 12px 10px 10px 0px;
+
+    
+}
+.header >*{
+    padding: 20px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #101010;
+    border-top-left-radius:8px ;
+    border-top-right-radius: 8px;
+
+}
+
+#btn-sup{
+    background: none;
+    border: none;
+    color: #c4c2c2;
+
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    padding-right: 30px;
+}
+#btn-lin{
+    padding: 13px 32px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+
+}
+.body-sec{
+    min-height:90vh ;
+}
+.body-sec .b-heading{
+   color: #fff;
+   padding: 15px;
+   font-family: sans-serif;
+    
+}
+.card-cont{
+    padding: 10px 15px;
+    display: flex;
+    
+
+}
+.card-cont .card{
+    width: 250px;
+   border-radius:8px ;
+    padding: 10px;
+    background-color:#101010;
+}
+.card img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+.card .card-head,.card-para{
+    padding-top:10px ;
+    line-height: 1.5;
+}
