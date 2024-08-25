@@ -40,3 +40,14 @@ storycrd.addEventListener("click",(dets)=>{
   }, 3000);
 
 });
+
+
+
+
+
+
+
+
+
+
+
